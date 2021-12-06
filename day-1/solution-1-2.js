@@ -4,11 +4,12 @@ const testInput = fs.readFileSync('./day-1/day1-1_input.txt', 'utf-8').split('\n
 
 let numberOfIncreases = 0
 
-testInput.forEach((input, idx) => {
-  const previousIndex = idx - 1
-  if (previousIndex >= 0 && input > testInput[previousIndex]) {
+for (let i = 0; i < testInput.length - 3; i++) {
+  const fisrtWindowStart = testInput[i]
+  const secondWindowEnd = testInput[i + 3]
+  if (secondWindowEnd > fisrtWindowStart) {
     numberOfIncreases++
   }
-})
+}
 
 console.log('RESULT:', numberOfIncreases)
