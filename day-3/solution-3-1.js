@@ -6,7 +6,6 @@ const digits = {}
 testInput.forEach(input => {
   const arrayInput = input.split('')
   arrayInput.forEach((digit, idx) => {
-    console.log('di', digit)
     if (digits[idx] === undefined) {
       digits[idx] = {zero: 0, one: 0}
     }
